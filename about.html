@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUNG - About</title>
+    <style>
+        @font-face {
+            font-family: "header1";
+            src: url("./font/NotoSerifTC-Regular.otf") format("truetype");
+        }
+
+        @font-face {
+            font-family: "header2";
+            src: url("./font/NotoSerifTC-Bold.otf") format("truetype");
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            transition: opacity 5s;
+            }
+        .header {
+            margin: 3%;
+            text-align: right;
+        }
+
+        .href {
+            color: rgb(0, 0, 0);
+            text-decoration: underline dotted;
+        }
+
+        .href:hover {
+            color: rgb(111, 0, 255);
+        }
+
+        .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        }
+
+        .section h1, h2, h3, h4, h5, h6 {
+            font-family: "header2";
+            margin: 10px 0;
+        }
+
+        .section p {
+            font-family: "header1";
+            margin: 5px 0;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .section-content {
+            margin-top: 10px;
+        }
+
+        .education-item, .experience-item {
+            margin-bottom: 20px;
+        }
+
+        .education-item h4, .experience-item h4 {
+            margin-bottom: 5px;
+        }
+
+        .education-item .details, .experience-item .details {
+            margin-left: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <p><a class="href" href="#" onclick="goBack()">Go Back</a> / <a class="href" href="./about.html">About</a> / <a class="href" href="./profile.html">Profile</a></p>
+    </div>
+    <script>
+    window.onload = function() {
+        document.body.style.opacity = 1;
+        };
+
+        // 下面是回退指令
+        function goBack() {
+        window.history.back();
+    }
+    </script>
+<div class="container">
+    <div class="section">
+        <h1>Gao Feng</h1>
+        <h1>高渢</h1>
+        <p>Master's degree in Business Administration at <a class="href" href="https://www.khu.ac.kr/">Kyung Hee University</a>.</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="section-content">
+            <div class="education-item">
+                <h4>Bachelor of Business Administration</h4>
+                <p>Kyung Hee University, 2019-2023</p>
+                <p class="details">GPA: 3.51</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Research Interest</h2>
+        <div class="section-content">
+            <div class="experience-item">
+                <h4>Natural Language Processing</h4>
+                <p>Social media analysis, Text analytics</p>
+                <p class="details">Prepared to research how comments, replies, and potential public sentiment on social media can impact certain industries.</p>
+            </div>
+            <div class="experience-item">
+                <h4>Deep Learning</h4>
+                <p>Leveraging unstructured data more effectively through deep learning</p>
+                <p class="details"></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

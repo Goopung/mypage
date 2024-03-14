@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUNG - Blog</title>
+    <style>
+        @font-face {
+            font-family: "blogtext";
+            src: url("./font/Lato-Regular.ttf") format("truetype");
+        }
+
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        transition: opacity 5s;
+        }
+
+        .top-content {
+            background-color: #f2f2f2;
+            padding: 30px;
+            margin: 0 3%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+        }
+
+        .date {
+            font-size: 13px;
+            color: rgb(0, 4, 255);
+        }
+
+        .name {
+            color: rgb(0, 0, 0);
+        }
+
+        .title {
+            font-size: 20px;
+        }
+
+        .content {
+            font-family: "blogtext";
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .header {
+            margin: 3%;
+            text-align: right;
+        }
+
+        .href {
+            color: rgb(0, 0, 0);
+            text-decoration: underline dotted;
+        }
+
+        .href:hover {
+            color: rgb(111, 0, 255);
+        }
+
+        .blog-content {
+            padding: 30px;
+            margin: 20px 3%;
+            border-top: 1px solid #ccc;
+        }
+
+        .blog-content-bottom {
+            padding: 30px;
+            padding-bottom: 60px;
+            margin: 20px 3%;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+        
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .image-container img {
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+        }
+
+        .image-attribution {
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+
+        #disqus_thread {
+            margin: 10%;
+        }
+
+        footer {
+        text-align: center;
+        margin-top: 60px;
+        font-size: 11px;
+        color: #aeaeae96;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="header">
+        <p><a class="href" href="#" onclick="goBack()">Go Back</a> / <a class="href" href="./about.html">About</a> / <a class="href" href="./profile.html">Profile</a></p>
+    </div>
+    <div class="top-content">
+        <div class="date">12/3/2024 <span class="name">🌍 Seoul, South Korea</span></div>
+        <div class="title"><h4>📎 Top Message</h4></div>
+        <div class="content">
+            Currently enrolled in the Master's program in Business Administration at Kyung Hee University, majoring in Management Information Systems (MIS). My research interests lie in big data analytics, text mining, social media analysis, and sentiment analysis.
+        </div>
+    </div>
+
+    <!-- 博客条目2 -->
+    <div class="blog-content">
+        <div class="date">14/3/2024 <span class="name">🌍 KHU Central Library</span></div>
+        <div class="title"><h4>📖 머신러닝, 나도 러닝ㅠ (1)</h4></div>
+        <div class="content" style="text-indent:1em;">
+            <p>드디어.. 본격적 첫 블로그 업로드하게 되었습니다!</p>
+            <p>오늘 머신러닝 논문을 읽어보니까 예전 배웠던 데이터 분석 기법들을 까맣게 잊어먹었기 때문에 지금 다시 공부해야 된다 해서 블로그 형식으로 학습노트 정리해 보겠습니다.이번에 데이터 불균형 해결과 오분류표(confusion matrix)의 기본 내용들만 정리해볼게요. 실기는 나중에 하구;;;</p>
+            <p>현실 세계의 데이터들은 항상 이상적이지 않죠. 그래서 데이터 불균형 현상 즉, 변수 분포가 어느 한쪽에 너무 치우치는 것을 의미합니다. 예전에 생각해 봤는데 우세한 class만 학습시키고 나머지는 아예 없어도 괜찮지 않을까 싶어 가지고 하지만 클래스 간 데이터 수의 차이가 너무 크면 우세한 class로 편형됩니다. 다른 말로 하면 특정의 클래스에 overfitting이 되겠죠. 아래 오분류표(confusion matrix)를 참고하고 더 쉽게 이해할 수 있을 것 같습니다.</p>
+            <div class="image-container">
+                <div>
+                    <img src="./img/E-2-3.max-800x600_mMmzi4T.jpg" alt="confusion matrix">
+                    <p class="image-attribution">Image source: https://velog.io/@siyeon-hwang/Confusion-Matrix</p>
+                </div>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*정확도(Accuracy): TP+TN/(TP+TN+FP+FN)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*정밀도(Precision)/재현율(Recall): TP/(TP+FP)</p>
+            <p>우리 항상 중요하게 여겨지는 클래스의 데이터(Positive)를 많이 수집하지 못하고 있습니다. 예를 들면 불량제품보다 우량제품 더 많다는 말이죠. 이때, 더 많은 양의 데이터 보유하고 있는 클래스(일반적으로 Negative)만 학습시키면 정확도(Accuracy)가 높였지만 따라서 정밀도(Precision) 혹은 재현율(Recall)는 급격히 작아질 수 있습니다.
+                이런 경우 부족한 데이터를 더 수집해서 불균형 문제를 해결하면 좋겠지만 일반적으로 그렇지 못합니다. 다음 글에서 불균형 데이터 문제를 해소하는 2가지 해결 방법을 정리해보겠습니다.</p>
+                <p>끝!</p>
+        </div>
+    </div>
+
+    <!-- 博客条目1 -->
+    <div class="blog-content-bottom">
+        <div class="date">23/10/2023 <span class="name">🌍 Hebei, China</span></div>
+        <div class="title"><h4>👋 Print("hello, world!")</h4></div>
+        <div class="content">
+            —— "Hello,World"<br>
+            这是我个人网页里第一篇贴文，我将努力在我硕士课程两年的时间里，用我的知识、发现，以及用我“愚蠢的想法”来充实它: )
+        </div>
+    </div>
+
+    <!-- 博客条目3 -->
+    <!-- <div class="blog-content">
+        <div class="date">00/0/0000 <span class="name">🌍 New York, USA</span></div>
+        <div class="title"><h4>📎 题目</h4></div>
+        <div class="content">
+            。。。。。。。
+        </div>
+    </div> -->
+    <div id="disqus_thread"></div>
+    <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://pung-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+
+    window.onload = function() {
+        document.body.style.opacity = 1;
+        };
+
+    // 下面的是回退指令
+    function goBack() {
+        window.history.back();
+    }
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> 
+    <footer>
+        © Copyright 2023 PUNG. Hosted by GitHub Pages.
+    </footer>
+</body>
+</html>
