@@ -3,25 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profile page of Gao Feng, a graduate of Kyung Hee University in Business Administration, currently preparing for a Master's program.">
+    <meta name="keywords" content="Gao Feng, Pung Go, Kyung Hee University, Business Administration, Data Science, C++, Python, SQL">
+    <meta name="author" content="Gao Feng">
     <title>PUNG - Profile</title>
     <style>
-        @font-face {
-            font-family: "header1";
-            src: url("./font/NotoSerifTC-Regular.otf") format("truetype");
-        }
-
-        @font-face {
-            font-family: "header2";
-            src: url("./font/NotoSerifTC-Bold.otf") format("truetype");
-        }
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             opacity: 0;
-            transition: opacity 5s;
-            background-color: #f0f0f0;
+            transition: opacity 1s;
+            background-color: #ffffff;
             color: #333;
         }
 
@@ -41,65 +34,47 @@
 
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 10px;
         }
 
-        .section h1, h2, h3, h4, h5, h6 {
-            font-family: "header2";
-            margin: 10px 0;
+        .section h1, h2, h3 {
+            margin: 20px 0 10px;
             color: #333;
         }
 
         .section p {
-            font-family: "header1";
-            margin: 5px 0;
+            margin: 10px 0;
             line-height: 1.6;
-        }
-
-        .section {
-            margin-bottom: 30px;
         }
 
         .section-title {
             font-size: 24px;
             font-weight: bold;
-            color: #333;
-        }
-
-        .section-content {
-            margin-top: 10px;
         }
 
         .section-content img {
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-
-        .section-content div {
-            margin-bottom: 10px;
+            margin: 5px 5px 5px 0;
+            vertical-align: middle;
         }
 
         .quote {
             font-style: italic;
             color: #555;
         }
-
     </style>
 </head>
 <body>
     <div class="header">
-        <p><a class="href" href="#" onclick="goBack()">Go Back</a> / <a class="href" href="./about.html">About</a> / <a class="href" href="./profile.html">Profile</a></p>
+        <a class="href" href="#" onclick="goBack()">Go Back</a> / 
+        <a class="href" href="./about.html">About</a> / 
+        <a class="href" href="./profile.html">Profile</a>
     </div>
     <script>
         window.onload = function() {
             document.body.style.opacity = 1;
         };
 
-        // 下面是回退指令
         function goBack() {
             window.history.back();
         }
@@ -112,35 +87,29 @@
             <p><b>👨‍🎓&nbsp;&nbsp;Kyung Hee University School Of Management<br>
                 🏃&nbsp;&nbsp;Currently studying C++ and database languages<br>
                 💭&nbsp;&nbsp;"Goal is to become a data scientist."</b></p>
-            <br>
-            <br>
         </div>
 
         <div class="section">
             <h2 class="section-title">Tools :</h2>
             <div class="section-content">
-                <div>
-                    <img src="https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white" alt="R"/>
-                    <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python"/>
-                    <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5"/>
-                    <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3"/>
-                    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javaScript&logoColor=black" alt="JavaScript"/><br>
-                    <img src="https://img.shields.io/badge/Pycharm-000000?style=flat&logo=pycharm&logoColor=white" alt="PyCharm"/>
-                    <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white" alt="Jupyter"/>
-                    <img src="https://img.shields.io/badge/RStudio-75AADB?style=flat&logo=rstudio&logoColor=white" alt="RStudio"/>
-                    <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white" alt="VSCode"/>
-                    <img src="https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white" alt="Tableau"/><br>
-                    <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white" alt="MySQL"/>
-                    <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white" alt="MongoDB"/>
-                </div>
+                <img src="https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white" alt="R" />
+                <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python" />
+                <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5" />
+                <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3" />
+                <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javaScript&logoColor=black" alt="JavaScript" /><br>
+                <img src="https://img.shields.io/badge/Pycharm-000000?style=flat&logo=pycharm&logoColor=white" alt="PyCharm" />
+                <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white" alt="Jupyter" />
+                <img src="https://img.shields.io/badge/RStudio-75AADB?style=flat&logo=rstudio&logoColor=white" alt="RStudio" />
+                <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white" alt="VSCode" />
+                <img src="https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white" alt="Tableau" /><br>
+                <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white" alt="MySQL" />
+                <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white" alt="MongoDB" />
             </div>
         </div>
 
         <div class="section">
             <h2 class="section-title">Other...</h2>
-            <p class="quote">「雪覆千山為何孤峰不白？」<br>
-            「不墮諸山色」</p>
-            <br>
+            <p class="quote">「雪覆千山為何孤峰不白？」<br>「不墮諸山色」</p>
             <p>- 끝 -</p>
         </div>
     </div>

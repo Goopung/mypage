@@ -15,7 +15,7 @@
         margin: 0;
         padding: 0;
         opacity: 0;
-        transition: opacity 5s;
+        transition: opacity 1s;
         }
 
         .top-content {
@@ -118,11 +118,51 @@
         <div class="date">12/3/2024 <span class="name">🌍 Seoul, South Korea</span></div>
         <div class="title"><h4>📎 Top Message</h4></div>
         <div class="content">
-            Currently enrolled in the Master's program in Business Administration at Kyung Hee University, majoring in Management Information Systems (MIS). My research interests lie in big data analytics, text mining, social media analysis, and sentiment analysis.
+            Currently enrolled in the Master's program in Business Administration at Kyung Hee University, majoring in Management Information Systems (MIS). I want to conduct research on image processing, specifically including quality management of product images using deep learning and smart manufacturing solutions. Additionally, since I am mainly interested in image classification and object detection, I am also focusing on fashion classification algorithms.
         </div>
     </div>
 
-    <!-- 博客条目2 -->
+    <!-- 博客6 -->
+    <div class="blog-content">
+        <div class="date">31/5/2024 <span class="name">🌍 Seoul, South Korea</span></div>
+        <div class="title"><h4>⭕️ Tensorflow 学习笔记4！</h4></div>
+        <div class="content">
+            <a class="href" href="https://blog.csdn.net/pung0302/article/details/139352856?spm=1001.2014.3001.5502">【tensorflow】T4.猴痘病识别</a>
+            <p>这次学习加了cheakpointer，并且做这个的同时也做了pytorch框架的同类问题，感觉还是tensorflow简单一点，torch里五六行代码tf一行解决...但是封装程度高的框架确实不适合刚接触dl的初学者学习hhh，有利有弊吧，感觉两个代码一起对照学习还是很有收获的。</p>
+        </div>
+    </div>
+
+    <!-- 博客5 -->
+    <div class="blog-content">
+        <div class="date">24/5/2024 <span class="name">🌍 Seoul, South Korea</span></div>
+        <div class="title"><h4>⭕️ Tensorflow 学习笔记3！</h4></div>
+        <div class="content">
+            <a class="href" href="https://blog.csdn.net/pung0302/article/details/139173932?spm=1001.2014.3001.5502">【tensorflow】T3.天气图片分类</a>
+            <p>这次加入了Dropout和数据预处理的部分内容，并且把归一化加在了模型中。而且与之前不同的是把learning rate指定了数值，但是调了两下发现都不如0.001好hhhhh。这次包括refetch和image dataset from directory了解了很多tensorflow里的数据预处理函数的内容，而且一边做一边回顾了之前学过的学习率相关的知识，收获不少。</p>
+        </div>
+    </div>
+
+    <!-- 博客4 -->
+    <div class="blog-content">
+        <div class="date">18/5/2024 <span class="name">🌍 Seoul, South Korea</span></div>
+        <div class="title"><h4>⭕️ Tensorflow 学习笔记2！</h4></div>
+        <div class="content">
+            <a class="href" href="https://blog.csdn.net/pung0302/article/details/139028844?spm=1001.2014.3001.5502">【tensorflow】T2.实现cifar10彩色图片分类</a>
+            <p>数据集的彩色图片不同于灰度图片，由于RGB混合，图片会有三个维度，灰度图片只有一个维度，这是在模型的input shape里就体现出来的。然后要求里说要把准确率提升到72%，所以投机取巧了一下，只增加了第三个卷积层和全连接层的神经元就完成任务了，第二次已经理解了tensorflow中的cnn的程序和结构，希望之后的学习能深化理解。</p>
+        </div>
+    </div>
+
+    <!-- 博客3 -->
+    <div class="blog-content">
+        <div class="date">9/5/2024 <span class="name">🌍 Shanghai, China</span></div>
+        <div class="title"><h4>💻 Tensorflow 学习笔记1！</h4></div>
+        <div class="content">
+            <a class="href" href="https://blog.csdn.net/pung0302/article/details/138610992?spm=1001.2014.3001.5501">【tensorflow】T1.实现mnist手写数字识别</a>
+            <p>很简单的CNN网络，validation accuracy可以到99%，其实前面的概念大致都清楚，就是在最后的array里才算真的明白了tensorflow的cnn怎么输出test结果，也算接触dl之后通过实践解决的第一个疑惑。</p>
+        </div>
+    </div>
+
+    <!-- 博客2 -->
     <div class="blog-content">
         <div class="date">14/3/2024 <span class="name">🌍 KHU Central Library</span></div>
         <div class="title"><h4>📖 머신러닝, 나도 러닝ㅠ (1)</h4></div>
@@ -139,12 +179,12 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*정확도(Accuracy): TP+TN/(TP+TN+FP+FN)<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*정밀도(Precision)/재현율(Recall): TP/(TP+FP)</p>
             <p>우리 항상 중요하게 여겨지는 클래스의 데이터(Positive)를 많이 수집하지 못하고 있습니다. 예를 들면 불량제품보다 우량제품 더 많다는 말이죠. 이때, 더 많은 양의 데이터 보유하고 있는 클래스(일반적으로 Negative)만 학습시키면 정확도(Accuracy)가 높였지만 따라서 정밀도(Precision) 혹은 재현율(Recall)는 급격히 작아질 수 있습니다.
-                이런 경우 부족한 데이터를 더 수집해서 불균형 문제를 해결하면 좋겠지만 일반적으로 그렇지 못합니다. 다음 글에서 불균형 데이터 문제를 해소하는 2가지 해결 방법을 정리해보겠습니다.</p>
+                이런 경우 부족한 데이터를 더 수집해서 불균형 문제를 해결하면 좋겠지만 일반적으로 그렇지 못합니다. 나중에 불균형 데이터 문제를 해소하는 2가지 해결 방법을 정리해보겠습니다.</p>
                 <p>끝!</p>
         </div>
     </div>
 
-    <!-- 博客条目1 -->
+    <!-- 博客1 -->
     <div class="blog-content-bottom">
         <div class="date">23/10/2023 <span class="name">🌍 Hebei, China</span></div>
         <div class="title"><h4>👋 Print("hello, world!")</h4></div>
@@ -154,7 +194,7 @@
         </div>
     </div>
 
-    <!-- 博客条目3 -->
+    <!-- 模板模板模板模板模板 -->
     <!-- <div class="blog-content">
         <div class="date">00/0/0000 <span class="name">🌍 New York, USA</span></div>
         <div class="title"><h4>📎 题目</h4></div>
